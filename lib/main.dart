@@ -47,12 +47,14 @@ class _AppEnticerState extends State<AppEnticer> {
         expanded = true;
       });
 
-      Future.delayed(Duration(seconds: 5)).then((value) {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => HomeWidget(),
-          ),
-        );
+      Future.delayed(Duration(seconds: 3)).then((value) {
+        Navigator.of(context)
+            .pushAndRemoveUntil(MaterialPageRoute(builder: (context) => HomeWidget()), (route) => false);
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => HomeWidget(),
+        //   ),
+        // );
       });
     });
 

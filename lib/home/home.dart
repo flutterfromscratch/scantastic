@@ -30,7 +30,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   void reassemble() {
     super.reassemble();
     if (Platform.isAndroid) {
-      controller?.pauseCamera();
+      // controller?.pauseCamera();
     } else if (Platform.isIOS) {
       controller?.resumeCamera();
     }

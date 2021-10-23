@@ -53,6 +53,7 @@ class _OrderPageState extends State<OrderPage> {
                     onPressed: () => showDialog(
                       context: context,
                       builder: (context) => SimpleDialog(
+                        contentPadding: EdgeInsets.all(32),
                         title: Text('Your order is in!'),
                         children: [Text("It's on its way!")],
                       ),
